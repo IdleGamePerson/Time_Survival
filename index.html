@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Survival 2</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menu">
+    <h1>Time Survival 2.0</h1>
+    <input type="text" id="searchInput" placeholder="Level suchen...">
+    <button id="toggleEditorButton">Leveleditor</button>
+
+    <div id="editorContainer" style="display: none;">
+      <h2>Leveleditor</h2>
+      <textarea id="jsonInput" placeholder='Level-JSON hier einfügen...' rows="10" cols="50"></textarea><br>
+      <button onclick="startCustomLevel()">Level hinzufügen</button>
+      <div id="jsonError" style="color: red; margin-top: 5px;"></div>
+    </div>
+
+
+    <div id="levelList"></div>
+  </div>
+
+  <div id="gameContainer" style="display: none;">
+    <canvas id="gameCanvas" width="1000" height="600"></canvas>
+    <div id="endScreen" style="display: none;">
+      <div>
+        <div id="endMessage"></div>
+        <div id="endButtons">
+          <button onclick="restartLevel()">Nochmal spielen</button>
+          <button onclick="backToMenu()">Zurück zum Menü</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="info">
+      Leben: <span id="lives">3</span>
+      <span id="progress" style="margin-left: 20px;">Fortschritt: 0%</span>
+      <button id="backButton" onclick="backToMenu()">Zurück zum Menü</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

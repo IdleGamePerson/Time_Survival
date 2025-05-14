@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    background: #222;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  #menu {
+    text-align: center;
+    max-height: 90vh;
+    overflow: hidden;
+  }
+  
+  #searchInput {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1.1em;
+    width: 300px;
+    max-width: 80%;
+  }
+  
+  #levelList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #444;
+  }
+  
+  .level-button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 30%;
+    min-width: 200px;
+    transition: background-color 0.2s;
+  }
+  
+  .level-button:hover {
+    background-color: #666;
+  }
+  
+  #gameContainer {
+    position: relative;
+  }
+  
+  #gameCanvas {
+    border: 2px solid white;
+    background-color: #111;
+  }
+  
+  #info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  #backButton {
+    margin-left: 20px;
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  #endScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+  }
+  
+  #endScreen > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #endMessage {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  
+  #endButtons {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  #endButtons button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #222;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+  }
+  
+  #endButtons button:hover {
+    background-color: #444;
+  }
+  
+  #toggleEditorButton {
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
